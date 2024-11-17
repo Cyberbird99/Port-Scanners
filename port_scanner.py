@@ -1,18 +1,25 @@
 import nmap
 
-# Firtst put the target in a variable
-target_host = "10.20.10.10"
+# Define the target IP address to scan
+target_ip = "10.20.10.10"
 
-# Identify beginning and ending ports for the scan
-port_beginning = 1
-port_ending = 150
+# Specify the starting and ending ports for the scan
+start_port = 1
+end_port = 150
 
-# And create the scanner object
-port_scanner = nmap.PortScanner()
+# Create an instance of the nmap.PortScanner class
+scanner = nmap.PortScanner()
 
-print("scanning {0}".format(target_host))
-# Loop through each port and scan.
-for port in range(port_beginning, port_ending + 1):
-    result = port_scanner.scan(target_host,str(port))
-    port_status = result['scan'] [target_host] ['tcp'] [port] ['state']
-    print("\tPort: {0} is (1)".format(port, port_status))
+# Print a message indicating which host is being scanned
+print(f"Scanning {target_ip}...")
+
+# Iterate over the range of ports to scan
+for port in range(start_port, end_port + 1):
+    # Perform the scan for the current port
+    scan_result = scanner.scan(target_ip, str(port))
+    
+    # Extract the state (open/closed) of the current port
+    port_state = scan_result['scan'][target_ip]['tcp'][port]['state']
+    
+    # Output the port number and its state
+    print(f"\tPort {port} is {port_state}")
