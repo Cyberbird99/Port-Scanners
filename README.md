@@ -10,6 +10,9 @@ nmap Scan: It uses the nmap Python library to scan each port and check whether i
 Results: The status of each port is printed to the console, showing whether the port is open, closed, or in some other state.
 
 Key Points:
+
 Port Scanning: This script performs a basic TCP port scan on a specified IP address, checking whether the ports are open or closed.
+
 nmap Library: The script leverages the nmap library to handle the scanning, making it easier to integrate nmap's functionality into a Python script.
+
 Use Cases: This type of port scanning is useful for network administrators and security professionals to assess which services are running on a networked machine and whether any ports are open to unauthorized access.
