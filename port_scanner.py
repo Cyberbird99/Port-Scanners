@@ -5,7 +5,7 @@ target_ip = "10.20.10.10"
 
 # Specify the starting and ending ports for the scan
 start_port = 1
-end_port = 150
+end_port = 200
 
 # Create an instance of the nmap.PortScanner class
 scanner = nmap.PortScanner()
