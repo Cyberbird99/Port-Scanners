@@ -3,7 +3,7 @@ Summary:
 
 Target IP: The code targets a specific IP address (e.g. 10.20.10.10).
 
-Port Range: The code scans ports from 1 to 150 on the target IP.
+Port Range: The code scans ports from 1 to 200 on the target IP.
 
 nmap Scan: It uses the nmap Python library to scan each port and check whether it's open or closed.
 
